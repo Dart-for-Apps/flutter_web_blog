@@ -55,11 +55,21 @@ class AdminServerChannel extends ApplicationChannel {
 
     router.route('/heroes/[:id]').link(() => HeroesController());
 
-    router.route('/blog/[:type]').link(() => BlogController(
+    router.route('/blog/[:type/[:id]]').link(() => BlogController(
           blogOption: blogOption,
         ));
 
-    router.route('/files/*').link(() => FileController(blogOption.baseDir));
+    router.route('/files/*').link(
+          () => FileController(blogOption.baseDir)
+            ..setContentTypeForExtension(
+              'json',
+              ContentType('application', 'json'),
+            )
+            ..addCachePolicy(
+              CachePolicy(expirationFromNow: Duration(days: 90)),
+              (path) => path.endsWith('.json'),
+            ),
+        );
 
     return router;
   }

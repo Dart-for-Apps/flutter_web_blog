@@ -21,6 +21,10 @@ class BlogController extends ResourceController {
   @Operation.get('type')
   Future<Response> getMeta(@Bind.path('type') String type) async {
     final response = await http.get('http://localhost:8888/files/$type.json');
-    return Response.ok(await jsonDecode(response.body));
+    try {
+      return Response.ok(await jsonDecode(response.body));
+    } catch (e) {
+      return Response.ok(response.body)..contentType = ContentType.html;
+    }
   }
 }
