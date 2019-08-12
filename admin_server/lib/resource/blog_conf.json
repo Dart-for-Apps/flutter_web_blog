@@ -1,0 +1,6 @@
+{
+  "baseDir": "/Users/wurikiji/work/git/flutter_web_blog/gdb/web/assets/data",
+  "tagFile": "tag.json",
+  "postFile": "post.json",
+  "categoryFile": "category.json"
+}
