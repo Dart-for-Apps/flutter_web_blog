@@ -1,6 +1,6 @@
-import 'package:flutter_web/material.dart';
 import 'dart:html' as html;
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:flutter_web/material.dart';
 
 part 'side_bar.g.dart';
 

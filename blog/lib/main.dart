@@ -4,8 +4,8 @@ import 'package:flutter_web/material.dart';
 import 'package:flutter_hooks_web/flutter_hooks_web.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:provider_web/provider.dart';
-import 'package:web_flutter/src/utility/layout_utility.dart';
-import 'package:web_flutter/src/view/component/side_bar.dart';
+import 'package:blog/src/utility/layout_utility.dart';
+import 'package:blog/src/view/component/side_bar.dart';
 
 part 'main.g.dart';
 
@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
 
 @swidget
 Widget notFoundPage() {
+  html.document.title = 'Not Found';
   html.window.history.replaceState(
     {'flutter': true},
     '404 Not Found',

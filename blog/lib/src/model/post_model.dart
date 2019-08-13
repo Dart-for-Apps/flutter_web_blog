@@ -1,4 +1,4 @@
-import 'package:web_flutter/src/value/post_type.dart';
+import 'package:blog/src/value/post_type.dart';
 
 class BlogPost {
   BlogPost({
