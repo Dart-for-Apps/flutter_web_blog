@@ -3,6 +3,7 @@ import 'package:admin_page/src/views/layouts/width_responsive.dart';
 import 'package:flutter_hooks_web/flutter_hooks_web.dart';
 import 'package:flutter_web/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:responsive_web/responsive_web.dart';
 
 part 'side_bar.g.dart';
 

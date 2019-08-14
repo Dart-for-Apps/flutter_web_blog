@@ -1,7 +1,5 @@
 library responsive_web;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/layouts/width_responsive.dart';
+
+export 'src/utils/layout_utils.dart';
