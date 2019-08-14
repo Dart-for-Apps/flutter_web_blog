@@ -19,16 +19,22 @@ class PostCard extends Card {
           key: key,
           borderOnForeground: false,
           child: ListTile(
-            contentPadding: EdgeInsets.all(16.0),
+            contentPadding:
+                EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             onTap: () {},
             onLongPress: () {},
             title: Text('Some blog post'),
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text('post date'),
-                Chip(
+                Text(
+                  'post date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+                ActionChip(
+                  onPressed: () {},
                   label: Text('tag'),
                   elevation: 1.0,
                 ),
