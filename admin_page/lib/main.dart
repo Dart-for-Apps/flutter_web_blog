@@ -1,7 +1,7 @@
-import 'package:admin_page/src/utils/layout_utils.dart';
 import 'package:admin_page/src/views/side_bar.dart';
 import 'package:flutter_web/cupertino.dart';
 import 'package:flutter_web/material.dart';
+import 'package:responsive_web/responsive_web.dart';
 
 void main() => runApp(BlogAdminPage());
 

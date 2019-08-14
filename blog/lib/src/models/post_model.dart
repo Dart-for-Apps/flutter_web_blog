@@ -1,4 +1,4 @@
-import 'package:blog/src/value/post_type.dart';
+import 'package:blog/src/constants/post_type.dart';
 
 class BlogPost {
   BlogPost({
