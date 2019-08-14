@@ -1,7 +1,8 @@
-import 'package:admin_page/src/views/side_bar.dart';
+import 'dart:html' as html;
+import 'package:admin_page/src/views/components/page_route.dart';
+import 'package:admin_page/src/views/main_page.dart';
 import 'package:flutter_web/cupertino.dart';
 import 'package:flutter_web/material.dart';
-import 'package:responsive_web/responsive_web.dart';
 
 void main() => runApp(BlogAdminPage());
 
@@ -10,32 +11,51 @@ class BlogAdminPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       key: LabeledGlobalKey('Root'),
-      title: "GDB - Admin",
+      debugShowCheckedModeBanner: false,
+      title: "Admin",
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         brightness: Brightness.dark,
+        floatingActionButtonTheme:
+            Theme.of(context).floatingActionButtonTheme.copyWith(
+                  backgroundColor: Colors.white,
+                ),
       ),
-      home: PageLayoutWidget(),
+      initialRoute: '/',
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case '/':
+            return SimpleMaterialPageRoute(
+              child: MainPage(),
+              settings: settings,
+            );
+          default:
+            return SimpleCupertinoPageRoute(
+              child: NotFoundPage(),
+              settings: settings,
+            );
+            break;
+        }
+      },
     );
   }
 }
 
-class PageLayoutWidget extends StatelessWidget {
-  const PageLayoutWidget({
-    Key key,
-  }) : super(key: key);
+class NotFoundPage extends StatelessWidget {
+  const NotFoundPage({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext _context) {
+    html.window.history.replaceState(
+      {'flutter': true},
+      '404 Not Found',
+      '#/404-not-found',
+    );
+    html.document.title = '404 Not Found';
     return Scaffold(
-      appBar: AppBar(
-        title: Text('GDB Blog Admin Page'),
-        centerTitle: true,
-      ),
       body: Center(
-        child: Text('this is admin page ${getCurrentWidth(context)}'),
+        child: Text('404 Not Found'),
       ),
-      drawer: SideBar(),
     );
   }
 }
