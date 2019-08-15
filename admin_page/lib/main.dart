@@ -4,7 +4,9 @@ import 'package:admin_page/src/views/main_page.dart';
 import 'package:flutter_web/cupertino.dart';
 import 'package:flutter_web/material.dart';
 
-void main() => runApp(BlogAdminPage());
+void main() {
+  runApp(BlogAdminPage());
+}
 
 class BlogAdminPage extends StatelessWidget {
   @override

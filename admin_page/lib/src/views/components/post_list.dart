@@ -29,10 +29,7 @@ class PostCard extends Card {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(
-                  'post date',
-                  overflow: TextOverflow.ellipsis,
-                ),
+                Text('post date'),
                 ActionChip(
                   onPressed: () {},
                   label: Text('tag'),
