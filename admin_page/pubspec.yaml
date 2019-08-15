@@ -17,6 +17,10 @@ dependencies:
       url: https://github.com/dart-for-apps/flutter_web_blog
       path: library/responsive_web
 
+  flutter_web_helper:
+    git:
+      url: https://github.com/dart-for-apps/flutter_web_blog
+      path: library/flutter_web_helper
   flutter_hooks_web:
     git: https://github.com/dart-for-apps/flutter_hooks_web
   provider_web:

@@ -1,3 +1,5 @@
+import 'package:admin_page/src/views/components/crud/post_checkbox.dart';
+import 'package:admin_page/src/views/components/crud/remove_post.dart';
 import 'package:flutter_web/material.dart';
 
 class MainPageHeader extends Container {
@@ -14,10 +16,7 @@ class MainPageHeader extends Container {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               // 모두 선택하기,
-              Checkbox(
-                onChanged: (checked) {},
-                value: false,
-              ),
+              PostCheckBox(),
               SizedBox(width: 16.0),
               // 정렬하기,
               SortPostDropDown(),
@@ -36,9 +35,8 @@ class MainPageHeader extends Container {
                 onPressed: () {},
               ),
               // 선택된 항목 지우기,
-              IconButton(
-                icon: Icon(Icons.delete_forever),
-                onPressed: () {},
+              RemovePostIconButton(
+                postId: 0,
               ),
               // 제일 끝에 검색하기
               Spacer(),

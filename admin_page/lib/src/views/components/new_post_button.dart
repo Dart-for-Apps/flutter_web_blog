@@ -1,17 +1,11 @@
 import 'dart:html' as html;
 import 'package:flutter_web/material.dart';
-import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:flutter_web_helper/responsive_web.dart';
 
 class NewPostFloatingActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Listener(
-      onPointerEnter: (enterEvent) {
-        html.document.body.style.cursor = 'pointer';
-      },
-      onPointerExit: (exitEvent) {
-        html.document.body.style.cursor = 'default';
-      },
+    return Clickable(
       child: FloatingActionButton(
         onPressed: () {
           /// TODO: Go to new post view

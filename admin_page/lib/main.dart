@@ -14,6 +14,7 @@ class BlogAdminPage extends StatelessWidget {
     return MaterialApp(
       key: LabeledGlobalKey('Root'),
       debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: true,
       title: "Admin",
       theme: ThemeData(
         primarySwatch: Colors.indigo,
