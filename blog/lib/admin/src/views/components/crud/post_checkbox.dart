@@ -1,4 +1,4 @@
-import 'package:admin_page/src/views/components/base/post_base_widget.dart';
+import '../../../views/components/base/post_base_widget.dart';
 import 'package:flutter_web/material.dart';
 
 class PostCheckBox extends PostBaseWidget {

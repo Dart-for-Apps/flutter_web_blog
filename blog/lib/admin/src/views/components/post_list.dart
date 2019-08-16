@@ -1,4 +1,4 @@
-import 'package:admin_page/src/views/components/post_card.dart';
+import '../../views/components/post_card.dart';
 import 'package:flutter_web/material.dart';
 
 class BlogPostList extends StatelessWidget {

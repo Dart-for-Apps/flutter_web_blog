@@ -1,6 +1,6 @@
 import 'dart:html' as html;
-import 'package:admin_page/src/views/components/page_route.dart';
-import 'package:admin_page/src/views/main_page.dart';
+import 'package:blog/admin/src/views/components/page_route.dart';
+import 'package:blog/admin/src/views/main_page.dart';
 import 'package:flutter_web/cupertino.dart';
 import 'package:flutter_web/material.dart';
 

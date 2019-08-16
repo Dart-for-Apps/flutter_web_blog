@@ -12,6 +12,15 @@ dependencies:
 
   built_collection: ">=2.0.0 <5.0.0"
   built_value: ">=5.5.5 <7.0.0"
+  responsive_web:
+    git:
+      url: https://github.com/dart-for-apps/flutter_web_blog
+      path: library/responsive_web
+
+  flutter_web_helper:
+    git:
+      url: https://github.com/dart-for-apps/flutter_web_blog
+      path: library/flutter_web_helper
   flutter_hooks_web:
     git: https://github.com/dart-for-apps/flutter_hooks_web
   provider_web:

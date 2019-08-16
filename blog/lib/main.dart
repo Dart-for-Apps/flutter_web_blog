@@ -7,8 +7,6 @@ import 'package:provider_web/provider.dart';
 import 'package:blog/src/utils/layout_utility.dart';
 import 'package:blog/src/views/components/side_bar.dart';
 
-part 'main.g.dart';
-
 const String mailToMeAnchorKey = 'mail-to-me-anchor';
 void main() {
   jsonTest();
@@ -47,23 +45,25 @@ class MyApp extends StatelessWidget {
   }
 }
 
-@swidget
-Widget notFoundPage() {
-  html.document.title = 'Not Found';
-  html.window.history.replaceState(
-    {'flutter': true},
-    '404 Not Found',
-    '#/404-not-found',
-  );
-  return WidgetsApp(
-    color: Colors.indigo,
-    title: 'GDB - 404',
-    builder: (context, _) => Scaffold(
-      body: Center(
-        child: Text("404 Not Found"),
+class NotFoundPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    html.document.title = 'Not Found';
+    html.window.history.replaceState(
+      {'flutter': true},
+      '404 Not Found',
+      '#/404-not-found',
+    );
+    return WidgetsApp(
+      color: Colors.indigo,
+      title: 'GDB - 404',
+      builder: (context, _) => Scaffold(
+        body: Center(
+          child: Text("404 Not Found"),
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class GDBLandingPage extends HookWidget {

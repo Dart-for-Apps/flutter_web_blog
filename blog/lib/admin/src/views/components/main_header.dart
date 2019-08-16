@@ -1,5 +1,5 @@
-import 'package:admin_page/src/views/components/crud/post_checkbox.dart';
-import 'package:admin_page/src/views/components/crud/remove_post.dart';
+import '../../views/components/crud/post_checkbox.dart';
+import '../../views/components/crud/remove_post.dart';
 import 'package:flutter_web/material.dart';
 
 class MainPageHeader extends Container {
