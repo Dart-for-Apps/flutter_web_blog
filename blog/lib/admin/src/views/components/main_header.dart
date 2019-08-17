@@ -1,5 +1,7 @@
-import '../../views/components/crud/post_checkbox.dart';
-import '../../views/components/crud/remove_post.dart';
+import 'package:flutter_hooks_web/flutter_hooks_web.dart';
+
+import '../../views/components/parts/post_checkbox.dart';
+import '../../views/components/parts/remove_post.dart';
 import 'package:flutter_web/material.dart';
 
 class MainPageHeader extends Container {
@@ -49,31 +51,39 @@ class MainPageHeader extends Container {
         );
 }
 
-class SortPostDropDown extends StatelessWidget {
+class SortPostDropDown extends HookWidget {
   const SortPostDropDown({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var selectedMenu = useState();
     return DropdownButton<int>(
+      value: selectedMenu.value,
       items: [
         DropdownMenuItem(
-          child: Text('최신'),
+          child: Text('최신순'),
           value: 1,
         ),
         DropdownMenuItem(
-          child: Text('예전'),
+          child: Text('오래된 순'),
           value: 2,
         ),
         DropdownMenuItem(
-          child: Text('제목'),
+          child: Text('제목순'),
           value: 3,
         ),
+        DropdownMenuItem(
+          child: Text('제목 역순'),
+          value: 4,
+        ),
       ],
-      onChanged: (value) {},
+      onChanged: (value) {
+        selectedMenu.value = value;
+      },
       hint: Text(
-        '정렬',
+        '정렬 순서',
         textAlign: TextAlign.end,
       ),
     );

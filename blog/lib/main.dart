@@ -15,7 +15,7 @@ void main() {
 
 jsonTest() async {
   print('bundle test');
-  print(await rootBundle.loadString('data/tags.json'));
+  print(await rootBundle.loadString('data/tag.json'));
 }
 
 class MyApp extends StatelessWidget {

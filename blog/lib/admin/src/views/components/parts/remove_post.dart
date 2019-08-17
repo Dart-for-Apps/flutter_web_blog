@@ -1,5 +1,5 @@
 import 'package:flutter_web/material.dart';
-import 'package:flutter_web_helper/responsive_web.dart';
+import 'package:flutter_web_helper/flutter_web_helper.dart';
 
 class RemovePostIconButton extends StatelessWidget {
   RemovePostIconButton({

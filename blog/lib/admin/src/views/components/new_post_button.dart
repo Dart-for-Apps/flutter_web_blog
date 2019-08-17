@@ -1,6 +1,7 @@
 import 'dart:html' as html;
+import 'package:blog/admin/src/views/post_editor.dart';
 import 'package:flutter_web/material.dart';
-import 'package:flutter_web_helper/responsive_web.dart';
+import 'package:flutter_web_helper/flutter_web_helper.dart';
 
 class NewPostFloatingActionButton extends StatelessWidget {
   @override
@@ -8,8 +9,7 @@ class NewPostFloatingActionButton extends StatelessWidget {
     return Clickable(
       child: FloatingActionButton(
         onPressed: () {
-          /// TODO: Go to new post view
-          print("Clicked new post");
+          PostEditor.load(context: context);
         },
         child: Icon(Icons.create),
       ),
