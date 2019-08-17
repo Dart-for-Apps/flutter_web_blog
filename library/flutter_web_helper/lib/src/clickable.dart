@@ -4,6 +4,7 @@ import 'package:flutter_web/material.dart';
 class Clickable extends Listener {
   Clickable({
     Widget child,
+    Function() onTap,
   }) : super(
           behavior: HitTestBehavior.opaque,
           onPointerHover: (hoverEvent) async {
@@ -20,6 +21,9 @@ class Clickable extends Listener {
           onPointerMove: (moveEvent) async {},
           onPointerSignal: (signalEvent) async {},
           onPointerUp: (upEvent) async {},
-          child: child,
+          child: GestureDetector(
+            child: child,
+            onTap: onTap,
+          ),
         );
 }
