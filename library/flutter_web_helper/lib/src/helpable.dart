@@ -5,6 +5,7 @@ class Helpable extends Listener {
   Helpable({
     Widget child,
   }) : super(
+          behavior: HitTestBehavior.opaque,
           onPointerHover: (hoverEvent) async {
             html.document.body.style.cursor = 'help';
           },

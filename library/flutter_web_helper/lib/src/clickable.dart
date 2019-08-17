@@ -5,6 +5,7 @@ class Clickable extends Listener {
   Clickable({
     Widget child,
   }) : super(
+          behavior: HitTestBehavior.opaque,
           onPointerHover: (hoverEvent) async {
             html.document.body.style.cursor = 'pointer';
           },
