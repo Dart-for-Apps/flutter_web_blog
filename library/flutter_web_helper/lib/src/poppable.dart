@@ -7,9 +7,11 @@ class Poppable extends StatefulWidget {
   Poppable({
     this.child,
     this.sensitiveness = 3,
+    this.onWillPop,
   });
   final Widget child;
   final int sensitiveness;
+  final WillPopCallback onWillPop;
   @override
   _PoppableState createState() => _PoppableState();
 }
@@ -26,7 +28,9 @@ class _PoppableState extends State<Poppable> {
     if (e.movement.x >= 3) {
       onMouseWheel.cancel();
       onMouseWheel = null;
-      Navigator.of(context).pop();
+      if (Navigator.of(context).canPop()) {
+        Navigator.of(context).pop();
+      }
     }
   }
 
